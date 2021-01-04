@@ -1,7 +1,7 @@
 const getWeeklyForecast = ({ latitude, longitude }) => {
-    const API_URL = 'https://pro.openweathermap.org/data/2.5/forecast/hourly';
-    const API_KEY = 'e02204a76f87c96d27746c33198e3b81';
-    
+    const API_URL = 'https://api.openweathermap.org/data/2.5/forecast/daily';
+    const API_KEY = '20e395c956a9dec120b9d9e55efa6a97';
+
     let url = API_URL+
     `?lat=${latitude}`+
     `&lon=${longitude}`+
