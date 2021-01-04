@@ -36,3 +36,13 @@ export const Max = styled.Text`
 `
 
 export const Min = styled.Text``
+
+export const ViewMoreButton = styled.TouchableOpacity`
+    padding: 5px;
+    background: #74b9ff;
+    border-radius: 10px;
+    width: 26px;
+    align-self: center;
+    margin-right: 10px;
+    align-content: center;
+`

@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
-import ForecastContext from '../context'
+import { Linking } from 'react-native';
+import ForecastContext from '../context';
 
-import { Container, CardContainer, Title, Deg, Max, Min } from './styles';
+import { Ionicons  } from '@expo/vector-icons'
+import { Container, CardContainer, Title, Deg, Max, Min, ViewMoreButton } from './styles';
 
 const Card = () => {
   const { currentForecast } = useContext(ForecastContext)
@@ -35,6 +37,10 @@ const Card = () => {
             <Min>/</Min>
           </Deg>
         </CardContainer>
+
+        <ViewMoreButton onPress={() => Linking.openURL(`https://openweathermap.org/city/${currentForecast.id}`)}>
+          <Ionicons name="arrow-forward-outline" size={16} color="white" />
+        </ViewMoreButton>
       </>
     }
     
